@@ -9,7 +9,11 @@ function auth(){
             var res = this.responseText.split("<br>");
             if(res[1]){
                 document.cookie=`token = ${res[1]}`;
-                location.replace("./Dashboard-user.html");
+                if(res[1].split('-')[1]){
+                    location.replace("./admin-dash.html");
+                }else{
+                    location.replace("./Dashboard-user.html")
+                }
             }else{
                 document.getElementById('pass-er').style.display="block";
                 setTimeout(()=>{document.getElementById('pass-er').style.display="none";},3000);

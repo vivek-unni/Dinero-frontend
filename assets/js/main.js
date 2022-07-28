@@ -12612,3 +12612,20 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     t.exports = jQuery;
   },
 });
+
+var token;
+
+function dashboardcheck() {
+  if (document.cookie.split("=")[1]) {
+    token = document.cookie.split("=")[1];
+    if (token.split('-')[1]) {
+      location.replace("./admin-dash.html");
+    } else {
+      location.replace("./Dashboard-user.html");
+    }
+  } else {
+    alert("Session expired. Login again");
+    location.replace("./");
+  }
+}
+document.getElementById('dash').addEventListener("click",dashboardcheck);
