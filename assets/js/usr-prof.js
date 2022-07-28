@@ -37,7 +37,7 @@ function getDetails(month) {
     xtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xtp.send(`date=${month}&uid=${token}`);
 }
-getDetails('btn-jan');
+getDetails('1');
 Object.keys(months).forEach(element => {
     console.log(element);
     document.getElementById(element).addEventListener("click",()=>{getDetails(months[element])});
