@@ -2,9 +2,13 @@
    background-image: url("../../images/bg.png");
    background-position: 50% 50%;
  }
-
+.Profile{
+  background-color: #478AC9;
+  color: whitesmoke;
+  border-radius: 10px;
+}
  .u-section-1 .u-sheet-1 {
-   min-height: 1604px;
+   min-height: 900px;
  }
 
  .u-section-1 .u-text-1 {

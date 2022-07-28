@@ -24,6 +24,30 @@ var months = {
     'btn-nov': '11',
     'btn-dec': '12',
 }
+
+function getUserProfile(){
+    var xtp = new XMLHttpRequest();
+    xtp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var data=this.responseText.split("<>");
+            console.log(data);
+            document.getElementById('Name').innerText=data[3];
+            document.getElementById('emp-id').innerText=data[2];
+            document.getElementById('age').innerText=data[4];
+            document.getElementById('dob').innerText=data[5];
+            document.getElementById('gen').innerText=data[6];
+            document.getElementById('desig').innerText=data[8];
+            document.getElementById('ofc').innerText=data[9];
+            document.getElementById('doj').innerText=data[7];
+            document.getElementById('uname').innerText=data[1];
+        }
+    };
+    xtp.open("POST", "https://dinero-server.herokuapp.com/profile.php", true);
+    // xtp.open("POST", "http://localhost/Server/profile.php", true);
+    xtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xtp.send(`uid=${token}`);
+}
+getUserProfile();
 function getDetails(month) {
     var xtp = new XMLHttpRequest();
     xtp.onreadystatechange = function () {
