@@ -1,7 +1,7 @@
 
 function table_view(){
    var req = new XMLHttpRequest();
-   req.open('GET','http://localhost/Server/');
+   req.open('GET','https://dinero-server.herokuapp.com');
    req.onload = function() {
       console.log(this)
       document.getElementById('output_body').innerHTML=this.response;
@@ -18,7 +18,7 @@ function snt(){
         table_view();
       }
     };
-   xhttp.open("POST", "http://localhost/Server/update.php", true);
+   xhttp.open("POST", "https://dinero-server.herokuapp.com/update.php", true);
    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    xhttp.send(`fname=${name}&pass=${pass}`);
 }
