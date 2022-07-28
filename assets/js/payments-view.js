@@ -1,6 +1,10 @@
 var token;
 if(document.cookie.split("=")[1]){
     token=document.cookie.split("=")[1];
+    if(!(token.split('-')[1])){
+        alert("Not an admin. Login with proper credentials");
+    location.replace("./");
+    }
 }else{
     alert("Session expired. Login again");
     location.replace("./");
@@ -11,20 +15,16 @@ function logout(){
 }
 document.getElementById('logout').addEventListener("click",logout);
 
-function getTotSum(){
+function getpaymentss(){
     var xtp = new XMLHttpRequest();
     xtp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(this.response);
-            var res=this.response.split('<_o_>');
-            console.log(res);
-            document.getElementById('emp-name').innerText=res[0];
-            document.getElementById('table-out').innerHTML=res[1];
+            document.getElementById('table-out').innerHTML=this.responseText;
         }
     };
-    xtp.open("POST", "https://dinero-server.herokuapp.com/tsal-sum.php", true);
-    // xtp.open("POST", "http://localhost/Server/tsal-sum.php", true);
+    xtp.open("POST", "https://dinero-server.herokuapp.com/view-pay.php", true);
+    // xtp.open("POST", "http://localhost/Server/view-pay.php", true);
     xtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xtp.send(`uid=${token}`);
+    xtp.send();
 }
-getTotSum();
+getpaymentss();

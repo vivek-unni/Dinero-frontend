@@ -99,11 +99,11 @@
           </colgroup>
           <tbody class="u-table-body">
             <tr style="height: 29px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">Employee Name :&nbsp;&nbsp;</td>
+              <td id="emp-name" class="u-border-2 u-border-grey-dark-1 u-table-cell">Employee Name :&nbsp;&nbsp;</td>
             </tr>
-            <tr style="height: 34px;">
+            <!-- <tr style="height: 34px;">
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">Scale of Pay :</td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
@@ -122,179 +122,24 @@
             <col width="9%">
             <col width="9.200000000000008%">
           </colgroup>
-          <tbody class="u-table-body">
+          <thead>
             <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">Months</td>
+              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">Month and year</td>
+              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">PID</td>
+              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">PayDate</td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">Basic Pay</td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">DA</td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">HRA</td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">CCA</td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">Insurance</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">Tax</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">LIC</td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">SLI</td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">GPF</td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">Net Salary</td>
             </tr>
+          </thead>
+          <tbody id="table-out" class="u-table-body">
             <tr style="height: 48px;">
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell">January</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">February</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">March</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">April</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">May</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">June</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">July<br>
-              </td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">August</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">September</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">October</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">November</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell">December</td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
-            </tr>
-            <tr style="height: 48px;">
-              <td class="u-border-2 u-border-grey-dark-1 u-table-cell u-table-cell-146">Total:</td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
               <td class="u-border-2 u-border-grey-dark-1 u-table-cell"></td>
