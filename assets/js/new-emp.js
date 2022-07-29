@@ -15,8 +15,9 @@ function logout(){
 }document.getElementById('logout').addEventListener("click",logout);
 const form = document.getElementById('form')
 var gender="";
-document.getElementById('gender_0').addEventListener("click",()=>{gender=document.getElementById('gender_0').value;})
-document.getElementById('gender_1').addEventListener("click",()=>{gender=document.getElementById('gender_1').value;})
+document.getElementById('gender_0').addEventListener("click",()=>{gender="Male";})
+document.getElementById('gender_1').addEventListener("click",()=>{gender="Female";})
+document.getElementById('gender_2').addEventListener("click",()=>{gender="Other";})
 form.onsubmit=(e)=>{
     console.log(e)
     e.preventDefault();
