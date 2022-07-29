@@ -6,7 +6,10 @@
   <meta charset="utf-8">
   <meta name="keywords" content="About​​​">
   <meta name="description" content="">
-  <title>Dashboard-user</title>
+  <title>new-emp</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://avatars.githubusercontent.com/u/109078607?s=200&v=4" rel="icon">
   <link rel="stylesheet" href="./assets/css/style.css" media="screen">
   <link rel="stylesheet" href="./assets/css/Dashboard-user.css" media="screen">
@@ -58,6 +61,14 @@
                 class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" id="dash"
                 style="padding: 10px 20px;">Dashboard</a>
             </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="Salary-Details.html" style="padding: 10px 20px;">Salary Details</a>
+            </li>
+            <li class="u-nav-item"><a id="logout"
+              class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+              style="padding: 10px 20px;">Logout</a>
+          </li>
           </ul>
         </div>
         <div class="u-custom-menu u-nav-container-collapse">
@@ -67,6 +78,12 @@
               <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
                 <li class="u-nav-item"><a class="u-button-style u-nav-link" id="dash">Dashboard</a>
                 </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Salary-Details.html">Salary
+                    Details</a>
+                </li>
+              </li>
+              <li class="u-nav-item"><a id="logout" class="u-button-style u-nav-link" >logout</a>
+            </li>
               </ul>
             </div>
           </div>
@@ -77,98 +94,164 @@
   </header>
   <section class="u-align-center u-clearfix u-image u-section-1" id="carousel_7528" data-image-width="300"
     data-image-height="168">
-
-    <div class="u-clearfix u-sheet u-sheet-1">
-      <div class="u-list u-list-1">
-        <div class="u-repeater u-repeater-1">
-          <a href="./employees.html">
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-1">
-                <div
-                  class="u-absolute-hcenter u-align-center u-container-style u-expanded u-group u-hover-feature u-opacity u-opacity-15 u-radius-34 u-shape-round u-white u-group-1">
-                  <div class="u-container-layout u-valign-bottom u-container-layout-2">
-                    <h4 class="u-text u-text-body-alt-color u-text-1">View Employees</h4>
+    <div align="center">
+      <div class="container mt-2 mb-2"
+        style="background-color: #3b3b3b8f; padding: 10px;padding-right: 30px; border-radius: 15px;color: white;">
+        <form id="form">
+          <div class="form-group row">
+            <label for="empname" class="col-3 col-form-label">Name</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-address-card"></i>
                   </div>
                 </div>
+                <input id="empname" name="empname" type="text" required="required" class="form-control">
               </div>
             </div>
-          </a>
-          <a href="./new-emp.html">
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-3">
-                <div
-                  class="u-align-center u-container-style u-expanded u-group u-hover-feature u-opacity u-opacity-15 u-radius-34 u-shape-round u-white u-group-2">
-                  <div class="u-container-layout u-valign-bottom u-container-layout-4">
-                    <h4 class="u-text u-text-body-alt-color u-text-default u-text-2">Add Employee</h4>
+          </div>
+          <div class="form-group row">
+            <label for="username" class="col-3 col-form-label">Username</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-address-book-o"></i>
                   </div>
                 </div>
+                <input id="username" name="username" type="text" required="required" class="form-control">
               </div>
             </div>
-          </a>
-          <a href="./Annual-Summary.html">
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-5">
-                <div
-                  class="u-align-center u-container-style u-expanded u-group u-hover-feature u-opacity u-opacity-15 u-radius-34 u-shape-round u-white u-group-3">
-                  <div class="u-container-layout u-valign-bottom u-container-layout-6">
-                    <h4 class="u-text u-text-body-alt-color u-text-default u-text-3">Pay an employee</h4>
+          </div>
+          <div class="form-group row">
+            <label for="uid" class="col-3 col-form-label">uid</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-500px"></i>
                   </div>
                 </div>
+                <input id="uid" name="uid" type="text" required="required" class="form-control">
               </div>
             </div>
-          </a>
-          <a href="./payment-view.html">
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-7">
-                <div
-                  class="u-align-center u-container-style u-expanded u-group u-hover-feature u-opacity u-opacity-15 u-radius-34 u-shape-round u-white u-group-4">
-                  <div class="u-container-layout u-valign-bottom u-container-layout-8">
-                    <h4 class="u-text u-text-body-alt-color u-text-default u-text-4">View payments</h4>
+          </div>
+          <div class="form-group row">
+            <label for="pass" class="col-3 col-form-label">password</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-lock"></i>
                   </div>
                 </div>
+                <input id="pass" name="pass" type="text" required="required" class="form-control">
               </div>
             </div>
-          </a>
-          <a href="./Profile.html">
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-11">
-                <div
-                  class="u-align-center u-container-style u-expanded u-group u-hover-feature u-opacity u-opacity-15 u-radius-34 u-shape-round u-white u-group-6">
-                  <div class="u-container-layout u-valign-bottom u-container-layout-12">
-                    <h4 class="u-text u-text-body-alt-color u-text-default u-text-6">Your profile</h4>
+          </div>
+          <div class="form-group row">
+            <label for="empid" class="col-3 col-form-label">Emp id</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-id-badge"></i>
                   </div>
                 </div>
+                <input id="empid" name="empid" type="text" class="form-control" required="required">
               </div>
             </div>
-          </a>
-          <a id="logout">
-            <div class="u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-container-layout-13">
-                <div
-                  class="u-align-center u-container-style u-expanded u-group u-hover-feature u-opacity u-opacity-15 u-radius-34 u-shape-round u-white u-group-7">
-                  <div class="u-container-layout u-valign-bottom u-container-layout-14">
-                    <h4 class="u-text u-text-body-alt-color u-text-default u-text-7">Log Out</h4>
+          </div>
+          <div class="form-group row">
+            <label for="age" class="col-3 col-form-label">Age</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-sign-language"></i>
                   </div>
                 </div>
+                <input id="age" name="age" type="text" class="form-control" required="required">
               </div>
             </div>
-          </a>
-        </div>
+          </div>
+          <div class="form-group row">
+            <label for="dob" class="col-3 col-form-label">Date of Birth</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-adn"></i>
+                  </div>
+                </div>
+                <input id="dob" name="dob" type="text" class="form-control" required="required">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-3">Gender</label>
+            <div class="col-9 u-align-left">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="gender" id="gender_0" type="radio" required="required" class="custom-control-input"
+                  value="Male">
+                <label for="gender_0" class="custom-control-label">Male</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="gender" id="gender_1" type="radio" required="required" class="custom-control-input"
+                  value="Female">
+                <label for="gender_1" class="custom-control-label">Female</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="doj" class="col-3 col-form-label">Date of Joining</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                </div>
+                <input id="doj" name="doj" type="text" class="form-control" required="required">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="desig" class="col-3 col-form-label">Designation</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-archive"></i>
+                  </div>
+                </div>
+                <input id="desig" name="desig" type="text" class="form-control" required="required">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="ofc" class="col-3 col-form-label">Office</label>
+            <div class="col-9">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="fa fa-location-arrow"></i>
+                  </div>
+                </div>
+                <input id="ofc" name="ofc" type="text" class="form-control" required="required">
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-3 col-9">
+              <button name="submit" type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
-      <p class="u-hover-feature u-text u-text-grey-15 u-text-8">DINERO </p>
-      <h2 class="u-text u-text-body-alt-color u-text-9">
-        <span style="font-size: 3rem;">About</span>
-      </h2>
-      <h4 class="u-align-left u-text u-text-body-alt-color u-text-10">Dinero is a payroll management system that can be
-        user by organizations for their pay management. We provide you access to your salary details,payslip, and all
-        details about the salary.&nbsp;</h4>
+
     </div>
-
-
-
-
-
-
 
   </section>
 
@@ -288,7 +371,7 @@
       <path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path>
     </svg>
   </span>
-  <script src="./assets/js/admin-dash.js"></script>
+  <script src="./assets/js/new-emp.js"></script>
 </body>
 
 </html>
