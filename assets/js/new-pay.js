@@ -37,9 +37,9 @@ form.onsubmit=(e)=>{
             console.log(this.responseText)
         }
     };
-    xtp.open("POST", "https://dinero-server.herokuapp.com/new-emp.php", true);
+    // xtp.open("POST", "https://dinero-server.herokuapp.com/new-emp.php", true);
     // xtp.open("POST", "http://localhost/Server/new-emp.php", true);
-    xtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    // xtp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     
     xtp.send(`username=${username}&empname=${empname}&uid=${uid}&pass=${pass}&empid=${empid}&age=${age}&dob=${dob}&gender=${gender}&doj=${doj}&desig=${desig}&ofc=${ofc}`);
 }
